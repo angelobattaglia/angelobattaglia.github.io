@@ -1,0 +1,53 @@
+#!/bin/bash
+
+# A build system of my website on top of ssg6, Angelo Battaglia, 2021
+
+checking(){
+
+  echo "Checking if the directory /dst exists .."
+        
+        if [[ -d "$PWD/dst" ]]
+        then
+                echo "/dst exists in your filesystem."
+        else
+                if [[ -f "$PWD/dst" ]]
+                then
+                        echo "I've found some file named /dst, deleting it .."
+                        rm dst
+                fi
+        echo "/dst doesn't exists or has been deleted, creating it .."
+        mkdir ./dst
+        fi 
+  echo "Now running make and building with ssg6 .."
+
+}
+
+parsingRSS(){
+
+        echo "Still have to parse RSS .."
+
+}
+
+# Writing between the two tokens "{{%" at the end of the index.html
+dateCheck(){
+
+        # file to target is src/_footer.html
+        # date | grep -o -P '(?<={{%).*(?=%}})' src/_footer.html 
+        var = $date
+        sed  '/\[{{%\]/a ' input
+        # date | sed -e 's/{{%\(.*\)%}}/\1/' src/_footer.html
+        # sed 's/h/JOSH/' index.html
+        # date > index.html
+}
+
+# # Functions:
+# checking
+# parsingRSS
+dateCheck
+
+# # Building everything by using Make (on Linux only)
+# make
+# make clean
+
+# "./" suggests that the target directory is the root directory of this project
+./ssg6 src ./ 'test' 'http://www'

@@ -1,0 +1,148 @@
+% Took inspiration from: overleaf and different github users
+% dst: https://github.com/xdanaux/moderncv/blob/master/manual/moderncv_userguide.pdf 
+% Overleaf: https://it.overleaf.com/gallery/tagged/cv/page/1
+
+\documentclass[11pt,letter,roman]{moderncv}
+\DeclareOldFontCommand{\rm}{\normalfont\rmfamily}{\mathrm}
+\DeclareOldFontCommand{\sf}{\normalfont\sffamily}{\mathsf}
+\DeclareOldFontCommand{\tt}{\normalfont\ttfamily}{\mathtt}
+\DeclareOldFontCommand{\bf}{\normalfont\bfseries}{\mathbf}
+\DeclareOldFontCommand{\it}{\normalfont\itshape}{\mathit}
+\DeclareOldFontCommand{\sl}{\normalfont\slshape}{\@nomath\sl}
+\DeclareOldFontCommand{\sc}{\normalfont\scshape}{\@nomath\sc}
+\DeclareRobustCommand*\cal{\@fontswitch\relax\mathcal}
+\DeclareRobustCommand*\mit{\@fontswitch\relax\mathnormal}
+
+\moderncvstyle{banking}
+\moderncvcolor{orange}
+%\renewcommand{\familydefault}{\sfdefault}
+
+\usepackage[scale=0.75]{geometry}
+\setlength{\hintscolumnwidth}{3cm}
+%\setlength{\makecvtitlenamewidth}{10cm}
+
+\usepackage[backend=biber,style=ieee,defernumbers=true]{biblatex}
+\addbibresource{./pub.bib}
+
+\usepackage{graphicx}
+\graphicspath{ {./} }
+
+\usepackage{lastpage}
+\cfoot{\addressfont\itshape\textcolor{blue}{Page \thepage\ of \pageref{LastPage}}}
+
+\name{Angelo}{Battaglia}
+%\title{how do you entitle yourself}
+%\address{street and number}{postcode city}{country}
+\phone{+393664313553}
+\email{angelobattaglia.math@gmail.com}
+\homepage{angelobattaglia.github.io}
+\social[linkedin]{angbattaglia}
+\social[github]{angelobattaglia}
+%\social[twitter]{}
+%\extrainfo{}
+%\photo[64pt][0.4pt]{}
+%\quote{}
+
+\begin{document}
+\makecvtitle
+
+\section{ Research Interests }
+
+Optimization, information theory and partial differential equations
+
+\section{ Education }
+    \cventry{}%
+      {Bachelor of Science, Mathematics}%
+      {Polytechnic University of Turin}%
+      {Turin, Italy}%
+      {}%
+      {}
+  
+\section{ Industry Experience }
+    \subsection{Argo Software Srl}
+    \cventry{March 2021--September 2021}%
+      {Argo Software Srl}%
+      {Research Intern}%
+      {Ragusa, Italy}%
+      {}%
+      {
+        \begin{itemize}
+        \item {\bf Research Area}: Optimization
+        \item Built and released {\it a study and a simulation} as an open source software using {\bf Python}, {\bf numpy}, {\bf scipy}, and {matplotlib\bf} on {\bf linux}. It is available on GitHub at \url{https://github.com/angelobattaglia/argosoft}.\end{itemize}
+      }
+
+\section{ Projects }
+  
+    \subsection{GitHub Portfolio} %--  {}
+    \begin{itemize}
+      \item Hosts original code samples, papers and patches for open source projects. Link: \url{ https://github.com/angelobattaglia } 
+      %\item
+    \end{itemize}
+    
+    \subsection{Personal Blog and Website} %-- \url{ http://angelobattaglia.github.io } }
+    \begin{itemize}
+      \item Hosted on GitHub Pages. Uses {\bf Markdown} for posts and a customized {\bf ssg6} for static HTML generation. Link: \url{ https://github.com/angelobattaglia/angelobattaglia.github.io}
+    \end{itemize}
+
+\section{ Skills }
+    \begin{itemize}
+    \item { \bf Languages. }  C, C++, Java, Julia, Python, R, Shell
+    \item { \bf Tools. } Linux, SQL, Make, CMake, git, latex, docker
+    \end{itemize}
+
+% \section{ Honors \& Awards }
+  % \begin{itemize}
+    % \item nameoftheprize111, year
+      % \begin{itemize}
+      % \item {description111.}
+      % \end{itemize}
+    % \item nameoftheprize222, year
+      % \begin{itemize}
+      % \item {description222.}
+      % \end{itemize}
+  % \end{itemize}
+
+% \section{ Research Experience }
+    % \subsection{Institution}
+    % \cventry{January 1000--December 3000}%
+      % {Company Software}%
+      % {Research Intern}%
+      % {Rome, Italy}%
+      % {}%
+      % {
+        % \begin{itemize}
+        % \item {\bf Advisor:} Dr. Alan Turing\item {\bf Research Area}: .\item Algorithm development for stochastic optimization using quasi-Newton methods for {\bf parameter estimation} in {\bf Fortran 95} and {\bf OpenMP}.\item Bioinformatics research on yeast cell modeling using {\bf Fortran 95}, {\bf C++}, and {\bf Matlab}.\end{itemize}
+      % }
+  
+% \section{ Teaching Experience }
+  % \begin{itemize}
+      % \item
+        % Occupation title.
+        % {\bf coursecode, nameofthecourse}.
+        % University.
+        % {\it January 2100--June 2111}. % Period of time
+  % \end{itemize}
+
+% \section{ Publications }
+  % \nocite{*}
+  % \subsection{Conference Proceedings}
+  % \printbibliography[heading=none,type=inproceedings,
+    % prefixnumbers=C]
+  % \subsection{Journal Articles}
+  % \printbibliography[heading=none,type=article,keyword=journal,
+    % resetnumbers=true,prefixnumbers=J]
+  % \subsection{Magazine Articles}
+  % \printbibliography[heading=none,type=article,keyword=magazine,
+    % resetnumbers=true,prefixnumbers=M]
+
+% \section{ Talks }
+    % \begin{itemize}
+    % \item talk, 14th March 2229
+    % \end{itemize}
+
+% \section{ Activities }
+    % \begin{itemize}
+    % \item Linux hacker 
+    % \end{itemize}
+
+\end{document}
